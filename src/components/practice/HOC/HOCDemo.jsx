@@ -1,15 +1,3 @@
-import { useState } from "react";
-import UserCard from "./UserCard";
-import ClickCounter from "./ClickCounter";
-import HoverCounter from "./HoverCounter";
-
-import withLoading from "./WithLoadingg";
-import withAuth from "./withAuth";
-import withCounter from "./withCounter";
-
-const UserCardWithLoading = withLoading(UserCard);
-const SecureUserCard = withAuth(UserCard);
-const EnhancedClick = withCounter(ClickCounter);
 const EnhancedHover = withCounter(HoverCounter);
 const ClickWithLoading = withLoading(withCounter(ClickCounter));
 const SecureUserCardWithLoading = withAuth(withLoading(UserCard));

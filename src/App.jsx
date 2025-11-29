@@ -29,7 +29,7 @@ export default function App() {
 			<Footer />
 			
 			{/* Practice Components - Below Footer */}
-			<UseEffectPractice />
+			{/* <UseEffectPractice />
 			<Counter />
 			<UseRefPractice />
 			<Stopwatch />
@@ -40,7 +40,7 @@ export default function App() {
 				<Child />
 			</ThemeProvider>
 			<HOCDemo />
-			<RenderPropsDemo />
+			<RenderPropsDemo /> */}
 		</>
 	);
 }
