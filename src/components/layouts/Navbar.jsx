@@ -17,8 +17,6 @@ import {
 	alpha,
 } from "@mui/material";
 import {
-	DarkMode,
-	LightMode,
 	Menu as MenuIcon,
 	Close,
 } from "@mui/icons-material";
@@ -34,7 +32,6 @@ const LINKS = [
 ];
 
 export default function Navbar() {
-	const { mode, toggle } = useContext(ColorModeContext);
 	const theme = useTheme();
 	const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 	const [mobileOpen, setMobileOpen] = useState(false);
@@ -125,25 +122,7 @@ export default function Navbar() {
 								>
 									{link.label}
 								</Button>
-							))}
-							<IconButton
-								aria-label="Toggle dark mode"
-								onClick={toggle}
-								size="medium"
-								sx={{
-									ml: 1,
-									transition: "all 0.3s ease",
-									"&:hover": {
-										transform: "rotate(180deg)",
-									},
-								}}
-							>
-								{mode === "light" ? (
-									<DarkMode fontSize="small" />
-								) : (
-									<LightMode fontSize="small" />
-								)}
-							</IconButton>
+						))}
 						</Stack>
 					)}
 

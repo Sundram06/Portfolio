@@ -11,17 +11,8 @@ export const ColorModeContext = createContext({
 
 export default function ColorModeProvider({ children }) {
 	const getInitialMode = () => {
-		try {
-			if (PERSIST_THEME) {
-				const stored = localStorage.getItem("mode");
-				if (stored === "light" || stored === "dark") return stored;
-			}
-		} catch {
-			// Ignore errors reading localStorage
-		}
-		return window.matchMedia("(prefers-color-scheme: dark)").matches
-			? "dark"
-			: "light";
+		// Always use light mode
+		return "light";
 	};
 
 	const [mode, setMode] = useState(getInitialMode);
